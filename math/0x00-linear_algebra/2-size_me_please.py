@@ -9,7 +9,7 @@ def matrix_shape_n(matrix, shape):
         return shape
     else:
         shape.append(len(matrix))
-        if len(matrix) > 1:
+        if type(matrix) == list and len(matrix) > 0:
             matrix_shape_n(matrix[0], shape)
 
 
