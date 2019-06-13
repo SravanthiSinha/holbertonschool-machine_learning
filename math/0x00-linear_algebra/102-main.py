@@ -97,6 +97,18 @@ np.concatenate((np_mat3, np_mat5), axis=1)
 t1 = time.time()
 print(t1 - t0, "\n")
 
+t0 = time.time()
+m = cat_matrices(mat3, mat5, axis=2)
+t1 = time.time()
+print(t1 - t0)
+print(m)
+t0 = time.time()
+try:
+    np.concatenate((np_mat3, np_mat5), axis=2)
+except ValueError:
+    print(None)
+t1 = time.time()
+print(t1 - t0, "\n")
 m = cat_matrices(mat2, mat5)
 print(m)
 
